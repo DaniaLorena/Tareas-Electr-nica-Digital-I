@@ -2,7 +2,7 @@
 Diagrama de Flujo del sistema FPGA
 ```mermaid
 graph TD;
-    A([INICIO / RESET]) --> A1[Inicializar FPGA y CPU]
+    A([INICIO]) --> A1[Inicializar FPGA y CPU]
 A1 --> A2[Inicializar memoria y registros]
 A2 --> A3[Inicializar display]
 A3 --> A4[Inicializar controles]
