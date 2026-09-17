@@ -2,7 +2,7 @@
 Diagrama de Flujo del sistema FPGA
 ```mermaid
 graph TD;
-    A([INICIO]) --> A1[Inicializar FPGA y CPU]
+A([INICIO]) --> A1[Inicializar FPGA y CPU]
 A1 --> A2[Inicializar memoria y registros]
 A2 --> A3[Inicializar display]
 A3 --> A4[Inicializar controles]
@@ -78,11 +78,8 @@ H10 --> H11[Actualizar puntuación]
 
 H8 -- NO --> H11
 
-H11 --> H12[Actualizar pantalla]
-H12 --> H13[Actualizar audio]
-H13 --> H14[Actualizar temporizador]
-
-H14 --> H15{¿Pausa solicitada?}
+H11 -->  H13[Actualizar audio]
+H13 --> H15{¿Pausa solicitada?}
 
 H15 -- SI --> H16[Mostrar menú de PAUSA]
 H16 --> H17{¿Continuar partida?}
@@ -154,4 +151,6 @@ I11 -- NO --> I12{¿Volver al menú?}
 
 I12 -- SI --> C1
 I12 -- NO --> C5
+
+
 ```
